@@ -6,7 +6,14 @@ const Body = () => {
 
 //use State -> local state variable
  const [listofRestaurant, setListofRestaurant] = useState(resList);
+ const [searchText, setsearchText] = useState("");
 
+ function filterData(searchText, listofRestaurant) {
+    const filterData = listofRestaurant.filter((listofRestaurant) => 
+        listofRestaurant.info.name.includes(searchText)
+    )
+    return filterData;
+ }
 // normal js variable
 let listofRestaurant2 =[
     {
@@ -74,19 +81,26 @@ let listofRestaurant2 =[
 
     return (
         <div className="body">
-            <div className="filter"> 
+            <div className="search-container"> 
+                <input 
+                 type="text" 
+                 className="search-input"
+                 placeholder="search"
+                 value={searchText}
+                 onChange={(e)=> {
+                    setsearchText(e.target.value)
+                 }}
+                />
                 <button
-                 className="filter-btn"
-                 onClick={()=> {
-                    const filteredList = listofRestaurant.filter(
-                        (res) => res.info.avgRating > 4.3
-                    )
-                    console.log(filteredList);
-                    setListofRestaurant(filteredList); 
-                 }} 
-                 > 
-                 Top Rated Restaurants
-                 </button>
+                 className="search-btn"
+                 onClick={(e) => {
+                    //need to filter data
+                    const data = filterData(searchText, listofRestaurant);
+                    //update the restaurants
+                    setListofRestaurant(data);
+                 }}>
+                    Search
+                </button>
             </div>
 
             <div className="res-container">

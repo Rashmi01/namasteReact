@@ -46,3 +46,36 @@ Namaste React
 - UI is driven by config(data)
 
 # Do Not use indexes for Key in React - as it shows antipattern - Always use id in the component
+
+# Food Delivery App Planning nad main structure
+  - Header
+    - Logo 
+    - Nav Items
+ - Body
+       - Search
+       - Restaurant Container
+           - Restaurant
+ - Footer
+       - License
+       - Links
+   
+# React Hooks
+- React hook is normal JS utility function given by react 
+- useState() - use to generate super powwerful state variables.
+- useEffect() 
+
+- Whenever a state variable changes its state or updates, ireact will re-renders the component
+
+# 2 types of exports
+- Named Export (when multiple things needs to be exported from single file)
+- Default Export (when only 1 thing needs to export) 
+
+# Reconcilation Algorithm also known as React Fiber -> new algorithm in react 16 which is a new way of finding diff between
+-  updated virtual dom and previous virtual DOM. After finding the diff, it updates the ACTUAL DOM
+- virtual DOM is just a representation of actual DOM . It is not the real DOM, infact it is normal JS object
+
+- Diff Algorithm
+    - Diff algorithm finds out thediffernce between 2 virtual DOMs , i.e. difference between updated virtual DOM and previous virtual DOM
+
+# REACT is fast coz, it is doing efficient DOM manipulation
+ - DOM manipulation happens everytime whenever state variable changes

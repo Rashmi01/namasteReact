@@ -63,6 +63,9 @@ Namaste React
 - React hook is normal JS utility function given by react 
 - useState() - use to generate super powwerful state variables.
 - useEffect() 
+    - if no dependecy array then useEffect is called everytime when component renders
+    - if dependecy array is empty, then useEffect is called only on initial render.
+    - if dependency array is [btnNameReact] -> called everytime btnNameReact is updated
 
 - Whenever a state variable changes its state or updates, ireact will re-renders the component
 
@@ -94,3 +97,17 @@ Namaste React
 - To make component dynamic
 - whenever useState variable iscalled, the entire componene re-reners
 - Whenever state variables update, react triggers a reconciliation cycle (re-renders the component) and updates only the diff
+
+# use Outlet of react-router-dom for below routing
+-           <Header/>
+            {/** if path is /  */}
+            <Body />
+            {/** if path is /about  */}
+            <About />
+            {/** if path is /contact  */}
+            <Contact />
+
+# Link Component 
+- link comes from react-router-dom
+- works sae as anchor tag
+- Do not renders the whole page unlike anchor tag

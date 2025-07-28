@@ -79,3 +79,18 @@ Namaste React
 
 # REACT is fast coz, it is doing efficient DOM manipulation
  - DOM manipulation happens everytime whenever state variable changes
+
+# 2 ways of loading pages with backend data
+- Loads -> API call (500ms) -> Render UI
+- Loads -> Render UI -> API calls (500ms) -> Inject UI with api data = Better UX
+
+# CORS policy
+- browser blocks to access API from one origin to another. i.e. when origin mismatch happens. (calling swiggy api from local host ) 
+
+# Conditional Rendering
+- rendering on basis of conditions are called conditional rendering
+
+# use of state variable
+- To make component dynamic
+- whenever useState variable iscalled, the entire componene re-reners
+- Whenever state variables update, react triggers a reconciliation cycle (re-renders the component) and updates only the diff

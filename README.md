@@ -111,3 +111,58 @@ Namaste React
 - link comes from react-router-dom
 - works sae as anchor tag
 - Do not renders the whole page unlike anchor tag
+
+# 2 types of routing
+- client side routing - we are making client side routing in our page. when we are not interacting with server or not fetching anything from server.
+- server side routing - 
+
+
+
+
+# Functional Component
+-  Functional Component is just a function which returns a piece of JSX
+
+# Class Based Component
+
+- Whenever parent say About component is rendered or mounted and then if it finds another components say (User) to render then the USer class constructor is instantiated i.e. constructor is called and then the render method is called.
+
+# ComponentDidMount is used to make API's call 
+- Why -> Coz, react 1st render the component quickly then do api calls and then fill the components with datas fetched from API calls.
+
+# Lifecycle of component rendering when same child component is called twice. Ex- USerClass is a child component and About is a parent component
+-    Parent constructor
+-    About.js:16 Parent render
+-    UserClass.js:7 First Child Component - Rashmi Class Comp propsUSer constructor
+-    UserClass.js:16 USer Render
+-    UserClass.js:7 Second Child Component - Rashmi Class Comp propsUSer constructor
+-    UserClass.js:16 USer Render
+
+     <DOM UPDATED - IN SINGLE  BATCH>
+
+-    UserClass.js:13 First Child Component - Rashmi Class Comp propsUSer component did mount
+-    UserClass.js:13 Second Child Component - Rashmi Class Comp propsUSer component did mount
+-    About.js:12 Parent component did mount
+
+# Mounting of component is done in 2 phase
+- 1st constructor is called, then render method is called, then actually react updates the DOM , once the DOM is updated then React component mount is called
+- Render Phase in this phase, react constructor and render is called and updates the DOM. 
+- Commit Phase in this phase, componentDidMount is called and hence API calls are made.
+
+# 
+- ******* Mounting Life Cycle*******
+    - Constructor (dummy)
+    - Render (dummy)
+    - <HTML> (dummy)
+    - Component Did Mount
+        <API Call>
+        <this.setState> -> State variable is updated
+
+- ******* Updated *******
+    - render (API data)
+    - <HTML> loaded with new API data
+    - componentDidUpdate
+
+- ******* Unmount *******
+    - component unmount is called (called when another page is rendered or where the current component is not rendered)
+    - used to do cleanup in the code
+    - Ex- if we are using setInterval in the code then we wshould be using clear interval in the componentWillUnmount function else, setInterval will keep hanging in the code.

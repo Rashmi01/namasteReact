@@ -166,3 +166,6 @@ Namaste React
     - component unmount is called (called when another page is rendered or where the current component is not rendered)
     - used to do cleanup in the code
     - Ex- if we are using setInterval in the code then we wshould be using clear interval in the componentWillUnmount function else, setInterval will keep hanging in the code.
+
+# Chunking, Lazy Loading, Code Splitting, Dynamic Bundling, on Demand loading, Dynamic Import
+- When app will load, it will not load the code for grocery, only when i go to Grocery page then Grocery code will get loaded.

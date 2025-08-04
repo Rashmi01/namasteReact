@@ -107,10 +107,10 @@ if(onlineStatus === false){
 
     return listofRestaurant.length === 0 ? <Shimmer /> :(
         <div className="body">
-            <div className="search-container"> 
+            <div className="search m-4 p-4 justify-center"> 
                 <input 
                  type="text" 
-                 className="search-input"
+                 className="border border-solid border-black"
                  placeholder="search"
                  value={searchText}
                  onChange={(e)=> {
@@ -118,7 +118,7 @@ if(onlineStatus === false){
                  }}
                 />
                 <button
-                 className="search-btn"
+                 className="px-4 py-2 bg-green-100 m-4 rounded-xl"
                  onClick={(e) => {
                     //need to filter data
                     const filtered = filterData(searchText, listofRestaurant);
@@ -129,7 +129,7 @@ if(onlineStatus === false){
                 </button>
             </div>
 
-            <div className="res-container">
+            <div className="flex flex-wrap">
             {
                 filteredRestaurant.map((restaurant)=>(
                     <Link key={restaurant.info.id} to={"/restaurants/"+restaurant.info.id}>

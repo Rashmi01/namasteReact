@@ -169,3 +169,12 @@ Namaste React
 
 # Chunking, Lazy Loading, Code Splitting, Dynamic Bundling, on Demand loading, Dynamic Import
 - When app will load, it will not load the code for grocery, only when i go to Grocery page then Grocery code will get loaded.
+
+# Styling
+- SASS & SCSS->sass is like writing css with some super power which makes writing CSS easier
+- styled components
+- MaterialUI
+- chakra UI
+- ant design
+- tailwind css
+    - rapidly build modern websites without ever leaving your HTML
